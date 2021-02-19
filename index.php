@@ -34,11 +34,16 @@ $mokiniai = [
 
 <head>
     <style>
+        table{
+            width: 100%;
+        }
         table, th {
-            border: 1px solid red;
+            border: 4px solid darkblue;
             border-collapse: collapse;
             padding: 8px;
         }
+
+
     </style>
 </head>
 <body>
