@@ -1,42 +1,160 @@
 <?php
-$klase = "5b";
-$kodas = rand();
-$vardas = "Eliziejus";
-$pavarde = "Capas";
-strtoupper($vardas);
-strtoupper($pavarde);
-$data = date("h:i A, F Y, l jS ");
-$vidurkis = 0;
-$sum = 0;
-$kontro_ivertinimas = [
-    "Matematika" => 5,
-    "Informacines techonologijos" => 9,
-    "Anglu" => 10
-];
-$sum = array_sum($kontro_ivertinimas);
-$kiekis = count($kontro_ivertinimas);
-$vidurkis = $sum / $kiekis;
 
 
-$mokiniai = [
+$mokiniai = array(
+    0 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Eliziejus",
+        "pavarde" => "Capas",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
 
-    $klase,
-    $kodas,
-    $vardas,
-    $pavarde,
-    $vidurkis,
-    $data,
+
+    ),
+    1 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Petras",
+        "pavarde" => "Petraitis",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
 
 
-];
+    ),
+    2 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Jonas",
+        "pavarde" => "Jonaitis",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
+
+
+    ),
+    3 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Martynas",
+        "pavarde" => "Martinaitis",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
+
+
+    ),
+    4 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Laura",
+        "pavarde" => "Laurinaitė",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
+
+
+    ),
+    5 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Marius",
+        "pavarde" => "Mariauskas",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
+
+
+    ),
+    6 => array(
+        "Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Gvidas",
+        "pavarde" => "Gvidaitis",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
+
+
+    ),
+    7 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Matas",
+        "pavarde" => "Mataitis",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ]
+
+
+    ),
+    8 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Valdas",
+        "pavarde" => "Valdaitis",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 5,
+            "Informatika" => 9,
+            "Anglu" => 10,
+        ],
+
+
+
+    ),
+    9 => array
+    ("Klase" => "5b",
+        "Kodas" => rand(),
+        "data" => date("l jS \of F Y h:i:s A"),
+        "vardas" => "Danielius",
+        "pavarde" => "Danieliauskas",
+        "Kontrolinio darbu ivertinimai" => [
+            "Matematika" => 10,
+            "Informatika" => 7,
+            "Anglu" => 10,
+        ]
+
+
+    )
+)
+
 
 ?>
 
 <head>
+    <title></title>
     <style>
-        table{
+        table {
             width: 100%;
         }
+
         table, th {
             border: 4px solid darkblue;
             border-collapse: collapse;
@@ -52,24 +170,36 @@ $mokiniai = [
         <tr>
             <th>Klase</th>
             <th>Kodas</th>
+            <th>Duomenu formavimo data</th>
             <th>Vardas</th>
             <th>Pavardė</th>
             <th>Kontroliniu darbu vidurkis</th>
-            <th>Duomenu formavimo data</th>
 
         </tr>
-        <tr>
-            <?php
+
+        <?php
+        $sum = 0;
+
+        foreach ($mokiniai as $array => $a) {
+            echo "<tr>";
+
+            foreach ($a as $b => $k) {
+
+                echo "<th>$k</th>";
 
 
-            for ($i = 0; $i < count($mokiniai); $i++) {
-                echo "<th>$mokiniai[$i]</th>";
+
 
             }
+            
 
 
-            ?>
-        </tr>
+
+        }
+
+
+        ?>
+
     </table>
 </div>
 </body>
