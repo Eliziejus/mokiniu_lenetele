@@ -5,13 +5,13 @@ $mokiniai = array(
     0 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
-        "vardas" => "Eliziejus",
-        "pavarde" => "Capas",
+        "data" => date(" F Y jS  |h:i:s A|"),
+        "vardas" => "Grybas",
+        "pavarde" => "Grybauskas",
         "Kontrolinio darbu ivertinimai" => [
             "Matematika" => 5,
-            "Informatika" => 9,
-            "Anglu" => 10,
+            "Informatika" => 10,
+            "Anglu" => 5,
         ]
 
 
@@ -19,7 +19,7 @@ $mokiniai = array(
     1 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Petras",
         "pavarde" => "Petraitis",
         "Kontrolinio darbu ivertinimai" => [
@@ -33,12 +33,12 @@ $mokiniai = array(
     2 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Jonas",
         "pavarde" => "Jonaitis",
         "Kontrolinio darbu ivertinimai" => [
             "Matematika" => 5,
-            "Informatika" => 9,
+            "Informatika" => 7,
             "Anglu" => 10,
         ]
 
@@ -47,11 +47,11 @@ $mokiniai = array(
     3 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Martynas",
         "pavarde" => "Martinaitis",
         "Kontrolinio darbu ivertinimai" => [
-            "Matematika" => 5,
+            "Matematika" => 10,
             "Informatika" => 9,
             "Anglu" => 10,
         ]
@@ -61,12 +61,12 @@ $mokiniai = array(
     4 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Laura",
         "pavarde" => "Laurinaitė",
         "Kontrolinio darbu ivertinimai" => [
             "Matematika" => 5,
-            "Informatika" => 9,
+            "Informatika" => 10,
             "Anglu" => 10,
         ]
 
@@ -75,13 +75,13 @@ $mokiniai = array(
     5 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Marius",
         "pavarde" => "Mariauskas",
         "Kontrolinio darbu ivertinimai" => [
-            "Matematika" => 5,
+            "Matematika" => 7,
             "Informatika" => 9,
-            "Anglu" => 10,
+            "Anglu" => 5,
         ]
 
 
@@ -89,13 +89,13 @@ $mokiniai = array(
     6 => array(
         "Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Gvidas",
         "pavarde" => "Gvidaitis",
         "Kontrolinio darbu ivertinimai" => [
             "Matematika" => 5,
             "Informatika" => 9,
-            "Anglu" => 10,
+            "Anglu" => 5,
         ]
 
 
@@ -103,13 +103,13 @@ $mokiniai = array(
     7 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Matas",
         "pavarde" => "Mataitis",
         "Kontrolinio darbu ivertinimai" => [
             "Matematika" => 5,
-            "Informatika" => 9,
-            "Anglu" => 10,
+            "Informatika" => 10,
+            "Anglu" => 8,
         ]
 
 
@@ -117,13 +117,13 @@ $mokiniai = array(
     8 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Valdas",
         "pavarde" => "Valdaitis",
         "Kontrolinio darbu ivertinimai" => [
-            "Matematika" => 5,
+            "Matematika" => 10,
             "Informatika" => 9,
-            "Anglu" => 10,
+            "Anglu" => 2,
         ],
 
 
@@ -132,12 +132,12 @@ $mokiniai = array(
     9 => array
     ("Klase" => "5b",
         "Kodas" => rand(),
-        "data" => date("l jS \of F Y h:i:s A"),
+        "data" => date(" F Y jS  |h:i:s A|"),
         "vardas" => "Danielius",
         "pavarde" => "Danieliauskas",
         "Kontrolinio darbu ivertinimai" => [
             "Matematika" => 10,
-            "Informatika" => 7,
+            "Informatika" => 5,
             "Anglu" => 10,
         ]
 
@@ -156,10 +156,12 @@ $mokiniai = array(
         }
 
         table, th {
-            border: 4px solid darkblue;
+            border: 2px solid darkblue;
             border-collapse: collapse;
             padding: 8px;
         }
+
+}
 
 
     </style>
@@ -178,22 +180,24 @@ $mokiniai = array(
         </tr>
 
         <?php
-        $sum = 0;
-
-        foreach ($mokiniai as $array => $a) {
+        foreach ( $mokiniai as $array => $a ) {
+            $sum = 0;
             echo "<tr>";
+            echo "<th>" . $a['Klase'] . "</th>";
+            echo "<th>" . $a['Kodas'] . "</th>";
+            echo "<th>" . $a['data'] . "</th>";
+            echo "<th>" . strtoupper($a['vardas']) . "</th>";
+            echo "<th>" . strtoupper($a['pavarde']) . "</th>";
+            foreach ($a['Kontrolinio darbu ivertinimai'] as $b => $pazymiai) {
 
-            foreach ($a as $b => $k) {
-
-                echo "<th>$k</th>";
-
-
-
+                $sum = $sum + $pazymiai;
 
             }
-            
-
-
+            $sum = $sum / sizeof($a['Kontrolinio darbu ivertinimai']);
+            echo "<th>";
+            echo round($sum);
+            echo "</th>";
+            echo '</th>';
 
         }
 
@@ -203,7 +207,3 @@ $mokiniai = array(
     </table>
 </div>
 </body>
-
-
-
-
